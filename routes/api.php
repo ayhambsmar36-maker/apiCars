@@ -7,6 +7,14 @@ use App\Http\Controllers\Cars\CarManagmentController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+
+Route::get('/', function () {
+    return response()->json([
+        'message' => 'Cars API is working 🚀',
+        'data' => []
+    ]);
+});
+
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
