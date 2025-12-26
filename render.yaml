@@ -5,7 +5,7 @@ services:
     buildCommand: "composer install && npm install && npm run build"
     startCommand: "php artisan serve --host 0.0.0.0 --port 10000"
     envVars:
-      - key: APP_ENV
+      - key: base64:uOIVVKZpNriLFcJgxrU4HL+GI1mY0cOdtnY9ED2DWVE=
         value: production
       - key: APP_DEBUG
         value: false
