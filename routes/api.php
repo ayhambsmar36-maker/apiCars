@@ -12,7 +12,7 @@ Route::get('/', function () {
     return response()->json([
         'message' => 'Cars API is working 🚀',
         'data' => []
-    ]);
+    ],200);
 });
 
 Route::get('/user', function (Request $request) {
@@ -34,3 +34,12 @@ Route::delete('/delete/car/{id}',[CarController::class,'destroy']);
 Route::get('/cars/show/{brand}',[CarManagmentController::class,'showCar_by_brand']);
 Route::post('/car/favorite/{car}',[CarManagmentController::class, 'favorite'])->middleware('auth:sanctum');
 Route::get('cars/favorites',[CarManagmentController::class,'favorites' ])->middleware('auth:sanctum');
+/*************************************************************************** */
+Route::get('/ping', function () {
+    return response()->json([
+        'status' => 'ok',
+        "messeage"=>"success welcome to api "
+
+
+],200);
+});
